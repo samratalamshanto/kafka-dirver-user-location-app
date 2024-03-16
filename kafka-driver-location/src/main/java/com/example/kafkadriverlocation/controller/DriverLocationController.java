@@ -2,6 +2,7 @@ package com.example.kafkadriverlocation.controller;
 
 import com.example.kafkadriverlocation.service.DriverLocationService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/rest/driver-location")
 @RequiredArgsConstructor
+@Slf4j
 public class DriverLocationController {
     private final DriverLocationService driverLocationService;
 
@@ -24,7 +26,7 @@ public class DriverLocationController {
 
             String location = Math.random() + "," + Math.random(); //location comes as api params
             driverLocationService.updateDriverLocation(location);
-
+            log.info("Sending location: {}", location);
             Thread.sleep(1000); //1 sec
             range--;
         }
