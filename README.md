@@ -14,8 +14,8 @@ using kafka listener.
 7. .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 8. .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-#create topic
-bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+create topic:
+#### .\bin\windows\kafka-topics.bat --create --topic topic-driver-locations --bootstrap-server localhost:9092
 
-#details
-.\bin\windows\kafka-topics.bat --describe --topic topic-driver-locations --bootstrap-server localhost:9092
+topic details:
+#### .\bin\windows\kafka-topics.bat --describe --topic topic-driver-locations --bootstrap-server localhost:9092
