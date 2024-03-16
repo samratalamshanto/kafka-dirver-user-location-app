@@ -1,6 +1,6 @@
 # kafka-driver-user-location-app
 
-Here, Just random locations from driver values send to kafka-topic. And in the user end, listen that locations values
+Here, the driver publishes the location to the kafka server and the user listens to the location information. Just random locations from driver values send to kafka-topic. And in the user end, listen that locations value
 using kafka listener.
 
 # Installing kafka in windows:
