@@ -19,7 +19,11 @@ public class LoggingAspect {
     @Around("within(com.example.kafkadriverlocation.service..*)")
     public void printLog(ProceedingJoinPoint joinPoint) throws Throwable {
         String methodName = joinPoint.getSignature().getName();
-        String className = joinPoint.getTarget().getClass().getName();
+        //give full package name
+        // String className = joinPoint.getTarget().getClass().getName();
+
+        //give only class name
+        String className = joinPoint.getTarget().getClass().getSimpleName();
         Object[] args = joinPoint.getArgs();
         if (args.length > 0) {
             log.info("Invoked... {}::{}() and args={}", className, methodName, Utility.objectToJsonString(args));
