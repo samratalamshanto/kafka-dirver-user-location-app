@@ -5,6 +5,9 @@ using kafka listener.
 
 ### Demo Video file name: screen-capture.webm
 
+## Run kafka using Docker:
+1. docker run -itd --name kafkaContainer -p 9092:9092 apache/kafka
+
 # Installing kafka in windows:
 
 1. Download kafka
@@ -22,6 +25,3 @@ create topic:
 topic details:
 #### .\bin\windows\kafka-topics.bat --describe --topic topic-driver-locations --bootstrap-server localhost:9092
 
-
-## For Docker:
-1. docker run -itd --name kafka -p 9092:9092 apache/kafka
