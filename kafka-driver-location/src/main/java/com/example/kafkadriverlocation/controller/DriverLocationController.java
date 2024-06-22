@@ -23,7 +23,6 @@ public class DriverLocationController {
     public ResponseEntity updateDriverLocation() throws InterruptedException {
         int range = 10;
         while (range > 0) {
-
             String location = Math.random() + "," + Math.random(); //location comes as api params
             driverLocationService.updateDriverLocation(location);
             log.info("Sending location: {}", location);

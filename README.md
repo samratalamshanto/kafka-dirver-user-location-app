@@ -21,3 +21,7 @@ create topic:
 
 topic details:
 #### .\bin\windows\kafka-topics.bat --describe --topic topic-driver-locations --bootstrap-server localhost:9092
+
+
+## For Docker:
+1. docker run -itd --name kafka -p 9092:9092 apache/kafka

@@ -10,8 +10,12 @@ import org.springframework.stereotype.Service;
 public class DriverLocationService {
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public boolean updateDriverLocation(String location) throws InterruptedException {
-        kafkaTemplate.send(Utility.TOPIC_NAME, location);
-        return true;
+    public Boolean updateDriverLocation(String location) throws InterruptedException {
+        try {
+            kafkaTemplate.send(Utility.TOPIC_NAME, location);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

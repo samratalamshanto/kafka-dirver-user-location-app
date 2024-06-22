@@ -1,6 +1,6 @@
 package com.example.kafkauserlocation.service;
 
-import com.example.kafkauserlocation.service.utility.Utility;
+import com.example.kafkauserlocation.utility.Utility;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
